@@ -2,7 +2,10 @@ $(function () {
     var timerInterval;
     var time = 0; // in seconds
     var isTimerRunning = false;
+    
+    console.log("1" +$('#task-item').children());
 
+    
     $('#add-task').click(function() {
         const taskText = $('#task-input').val();
         if (taskText !== "") {
