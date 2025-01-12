@@ -15,6 +15,7 @@ $(function () {
             // Add delete functionality
             deleteButton.click(function() {
                 taskItem.remove();
+
                 // Hide the timer if the task list is empty
                 if ($('#task-list li').length === 0) {
                     $('#timer-display').addClass('hidden');

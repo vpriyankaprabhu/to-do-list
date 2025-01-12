@@ -2,6 +2,10 @@ $(function () {
     var timerInterval;
     var time = 0; // in seconds
     var isTimerRunning = false;
+    
+    if ($('#task-list li').length === 0) {
+        $('#timer-display').addClass('hidden');
+    }
 
     $('#add-task').click(function() {
         const taskText = $('#task-input').val();
@@ -15,13 +19,10 @@ $(function () {
             // Add delete functionality
             deleteButton.click(function() {
                 taskItem.remove();
-                // Hide the timer if the task list is empty
-                if ($('#task-list li').length === 0) {
-                    $('#timer-display').addClass('hidden');
-                }
             });
 
             // Show timer when the first task is added
+            console.log($('#task-list li').length);
             if ($('#task-list li').length === 1) {
                 $('#timer-display').removeClass('hidden');
             }

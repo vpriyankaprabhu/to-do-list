@@ -22,6 +22,7 @@ $(function () {
             });
 
             // Show timer when the first task is added
+            console.log($('#task-list li').length);
             if ($('#task-list li').length === 1) {
                 $('#timer-display').removeClass('hidden');
             }
